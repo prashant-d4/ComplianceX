@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  
+  body {
+    background-color: #9399A5;
+    color: #18191E;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D7D2C7;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #BEB7A9;
+  }
+}
+
+/* Diagonal hatched pattern for calendar/stage cells like reference image */
+.bg-hatched {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(215, 210, 199, 0.4),
+    rgba(215, 210, 199, 0.4) 3px,
+    transparent 3px,
+    transparent 8px
+  );
+}
+
+.bg-gold-hatched {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(245, 200, 66, 0.25),
+    rgba(245, 200, 66, 0.25) 3px,
+    transparent 3px,
+    transparent 7px
+  );
+}
